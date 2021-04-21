@@ -16,12 +16,13 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter a3lte a33g a3ulte a5ltechn a5ltectc fortuna3g fortunave3g fortunalteub gprimelte gprimeltexx gprimeltespr gprimeltetfnvzw gprimeltezt gprimeltectc gtelwifiue gtesqltespr gt5note10wifi j3ltectc j3ltespr j3xprolte j53gxx j5lte j5ltechn j5nlte j5xnlte j5xlte j5xltecmcc j7ltespr j7ltechn o7prolte on7ltechn serranovelte serranove3g,$(TARGET_DEVICE)),)
+ifneq ($(filter a3lte a33g a3ulte a5ltechn a5ltectc fortuna3g fortunave3g fortunalteub gprimelte gprimeltexx gprimeltespr gprimeltetfnvzw gprimeltezt gprimeltectc gtelwifiue gtesqltespr gt5note10wifi gt510lte j3ltectc j3ltespr j3xprolte j53gxx j5lte j5ltechn j5nlte j5xnlte j5xlte j5xltecmcc j7ltespr j7ltechn o7prolte on7ltechn serranovelte serranove3g,$(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.qti.ant@1.0
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/lib/com.qualcomm.qti.ant@1.0.so
+LOCAL_SHARED_LIBRARIES := android.hidl.base@1.0 libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -32,36 +33,43 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libloc_api_v02
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/lib/libloc_api_v02.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libgps.utils libloc_core libm libqmi_cci libqmi_common_so libutils
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
+LOCAL_LDLIBS := -llog
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libloc_ds_api
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/lib/libloc_ds_api.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libdsi_netctrl libgps.utils libm libqmi_cci libqmi_common_so libqmiservices libutils
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
+LOCAL_LDLIBS := -llog
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libskia
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/lib/libskia.so
+LOCAL_SHARED_LIBRARIES := libAstcEnc libEGL libGLESv2 libc++ libc libcutils libdl libdng_sdk libexpat libft2 libjpeg liblog libm libpiex libpng libquramimagecodec libsamsungeffect libz
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
+LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := vendor.qti.hardware.fm@1.0
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/lib/vendor.qti.hardware.fm@1.0.so
+LOCAL_SHARED_LIBRARIES := android.hidl.base@1.0 libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -72,6 +80,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libHevcSwDecoder
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/vendor/lib/libHevcSwDecoder.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl liblog libm libmmosal libui
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -105,6 +114,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libqct_resampler
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/vendor/lib/libqct_resampler.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -116,11 +126,13 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
 LOCAL_MODULE_OWNER := samsung
 LOCAL_SRC_FILES := proprietary/vendor/lib/libtime_genoff.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm
 LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_LDLIBS := -llog
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -132,6 +144,56 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libconfigdb
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/vendor/lib/libconfigdb.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libdiag libdl libdsutils libm libxml
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libnetmgr
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/vendor/lib/libnetmgr.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libconfigdb libcutils libdiag libdl libdsutils liblog libm
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmdmdetect
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/vendor/lib/libmdmdetect.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm libutils
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_LDLIBS := -llog
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libxml
+LOCAL_MODULE_OWNER := samsung
+LOCAL_SRC_FILES := proprietary/vendor/lib/libxml.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdiag libdl libm
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_LDLIBS := -llog
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
 include $(BUILD_PREBUILT)
 
 endif
