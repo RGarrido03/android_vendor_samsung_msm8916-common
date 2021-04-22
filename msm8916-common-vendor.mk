@@ -205,7 +205,6 @@ PRODUCT_PACKAGES += \
     libloc_api_v02 \
     libloc_ds_api \
     vendor.qti.hardware.fm@1.0 \
-    libHevcSwDecoder \
     libaudioalsa \
     libbtnv \
     libqct_resampler \
