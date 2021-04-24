@@ -55,16 +55,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/msm8916-common/proprietary/etc/somxreg.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/somxreg.conf \
     vendor/samsung/msm8916-common/proprietary/etc/srm.bin:$(TARGET_COPY_OUT_SYSTEM)/etc/srm.bin \
     vendor/samsung/msm8916-common/proprietary/lib/libLLVM.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libLLVM.so \
-    vendor/samsung/msm8916-common/proprietary/lib/libcutils-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-old.so \
-    vendor/samsung/msm8916-common/proprietary/lib/libprotobuf-cpp-lite-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-lite-old.so \
-    vendor/samsung/msm8916-common/proprietary/lib/libprotobuf-cpp-full-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-full-old.so \
     vendor/samsung/msm8916-common/proprietary/lib/libstagefright_foundation-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_foundation-old.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libOmxVdecHevc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVdecHevc.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libarac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarac.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libatparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libatparser.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libaudio-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio-ril.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libcordon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcordon.so \
-    vendor/samsung/msm8916-common/proprietary/vendor/lib/libdrmdecrypt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrmdecrypt.so \
+    vendor/samsung/msm8916-common/proprietary/lib/libcutils-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-old.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libedmnativehelper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedmnativehelper.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libexifa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexifa.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libfactoryutil.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfactoryutil.so \
@@ -75,13 +72,14 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libmmjpeg_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg_interface.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libomission_avoidance.so:$(TARGET_COPY_OUT_VENDOR)/lib/libomission_avoidance.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libplayready_v2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/libplayready_v2.5.so \
+    vendor/samsung/msm8916-common/proprietary/lib/libprotobuf-cpp-full-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-full-old.so \
+    vendor/samsung/msm8916-common/proprietary/lib/libprotobuf-cpp-lite-old.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libprotobuf-cpp-lite-old.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libqomx_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_core.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsavsac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsavsac.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsavscmn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsavscmn.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsavsvc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsavsvc.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libseckeyprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseckeyprov.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsecnativefeature.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecnativefeature.so \
-    vendor/samsung/msm8916-common/proprietary/vendor/lib/libsecril-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsecril-client.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsnaace.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnaace.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsnamrnb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnamrnb.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libsnamrwb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnamrwb.so \
@@ -185,8 +183,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libqomx_jpegdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegdec.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libqti-at.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-at.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
-    vendor/samsung/msm8916-common/proprietary/vendor/lib/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-radioconfig.so \
-    vendor/samsung/msm8916-common/proprietary/vendor/lib/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qcril-hook-oem.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/librs_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno.so \
     vendor/samsung/msm8916-common/proprietary/vendor/lib/librs_adreno_sha1.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs_adreno_sha1.so \
