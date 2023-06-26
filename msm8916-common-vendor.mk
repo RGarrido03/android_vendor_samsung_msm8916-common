@@ -214,7 +214,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0 \
     libHevcSwDecoder \
     libaudioalsa \
-    libbtnv \
     libqct_resampler \
     libtime_genoff \
     TimeService
